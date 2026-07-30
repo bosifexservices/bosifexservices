@@ -448,9 +448,7 @@ transform:translateY(0);
 .contact-info{
     background:#0f766E;
     color:#fff;
-    padding:50px;
-word-break: break-word;
-overflow-wrap: break-word;
+    padding:40px;
     border-radius:20px;
 }
 
