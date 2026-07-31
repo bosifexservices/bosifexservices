@@ -170,8 +170,9 @@ section{
     cursor: pointer;
 }
 #darkModeBtn{
-    width:45px;
-    height:45px;
+    width:42px;
+    height:42px;
+    margin-right:15px;
     border:none;
     border-radius:50%;
     cursor:pointer;
@@ -179,13 +180,12 @@ section{
     font-size:18px;
 }
 
-
 /* ===========================
    HERO
 =========================== */
 
 .hero{
-    min-height:100vh;
+    min-height:85vh;
     background:
         linear-gradient(rgba(15,118,110,.45), rgba(20,184,166,.45)),  
         url("images/hero-bg.png")center center/cover no-repeat;
@@ -196,7 +196,7 @@ section{
     color:#fff;
     align-items:center;
     justify-content:flex-start;
-    padding:120px 8%;
+    padding:110px 8% 60px;
 }
 .hero-text{
     max-width:650px;
@@ -280,27 +280,39 @@ transform:translateY(0);
 
 .about-container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:50px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:3rem;
     align-items:center;
 }
 
 .about-image img{
     width:100%;
+    max-width:550px;
+    display:block;
+    margin:auto;
     border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.about-content{
+    width:100%;
 }
 
 .about-content h3{
-    font-size:34px;
-    color:#0F766E;
-    margin-bottom:20px;
+    font-size:clamp(1.8rem,4vw,2.3rem);
+    line-height:1.3;
 }
 
 .about-content p{
-    color:#555;
-    margin-bottom:20px;
-    line-height:1.8;
+    line-height:1.9;
+    font-size:1rem;
+    word-wrap:break-word;
+}
+.about{
+    padding-bottom:30px;
+}
+
+.why-us{
+    padding-top:30px;
 }
 
 /* ===========================
@@ -440,33 +452,41 @@ transform:translateY(0);
 
 .contact-container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:40px;
+    grid-template-columns:1fr 1.2fr;
+    gap:2rem;
     align-items:start;
 }
-
 .contact-info{
-    background:#0f766E;
+    background:#0F766E;
     color:#fff;
-    padding:50px;
-word-break: break-word;
-overflow-wrap: break-word;
+    padding:40px;
     border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    justify-content:flex-start;
+    height:100%;
 }
-
 .contact-info h3{
-    margin-bottom:20px;
+    margin-bottom:10px;
     font-size:30px;
 }
 
 .contact-info p{
-    margin:18px 0;
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin:0;
     font-size:18px;
+    line-height:1.7;
+    overflow-wrap:anywhere;
+    word-break:break-word;
 }
 
 .contact-info i{
-    color:#F59E0B;
-    margin-right:10px;
+    color:#FBBF24;
+    flex-shrink:0;
+    margin-top:4px;
 }
 
 .contact-form{
@@ -676,12 +696,6 @@ footer hr{
 
 @media (max-width:768px){
 
-    /* HEADER */
-    .header{
-        padding:15px 5%;
-    }
-
-
     /* MOBILE MENU ICON */
     .menu-toggle{
         display:block;
@@ -694,19 +708,20 @@ footer hr{
 
 
     /* MOBILE NAVIGATION */
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 5%;
-    }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    min-height: 70px;
+}
     .logo{
         margin-right: auto;
     }
     .navbar{
         display:none;
         position:absolute;
-        top:75px;
+        top:70px;
         left:0;
         width:100%;
         background:#fff;
@@ -731,12 +746,17 @@ footer hr{
 
 
     /* HERO */
-    .hero{
-        flex-direction:column;
-        text-align:center;
-        padding:170px 5% 80px;
-    }
-
+.hero {
+    min-height: 70vh;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 20px 40px;
+}
+.hero-text{
+    margin-top:0;
+    max-width:100%;
+}
 
     .hero-text h1{
         font-size:36px;
@@ -759,10 +779,10 @@ footer hr{
 
 
     /* SECTIONS */
-    section{
-        padding:70px 5%;
-    }
-
+    
+section{
+    padding:70px 20px;
+}
 
     .section-title h2{
         font-size:32px;
@@ -770,11 +790,23 @@ footer hr{
 
 
     /* ABOUT */
-    .about-container{
-        grid-template-columns:1fr;
-    }
+    
+.about-container{
+    grid-template-columns:1fr;
+    gap:2rem;
+}
 
+.about-content{
+    text-align:center;
+}
 
+.about-content h3{
+    font-size:2rem;
+}
+
+.about-content .btn{
+    display:inline-flex;
+}
     /* CARDS */
     .cards{
         grid-template-columns:1fr;
@@ -782,11 +814,26 @@ footer hr{
 
 
     /* CONTACT */
-    .contact-container{
-        grid-template-columns:1fr;
-    }
+    
+.contact-container{
+    grid-template-columns:1fr;
+    gap:2rem;
+}
 
+.contact-info,
+.contact-form{
+    padding:25px;
+}
 
+.contact-info h3{
+    font-size:26px;
+}
+
+.contact-info p{
+    font-size:17px;
+    line-height:1.8;
+    font-weight:500;
+}
     /* CTA */
     .cta{
         margin:40px 5%;
@@ -800,39 +847,102 @@ footer hr{
 
 
 }
+.whatsapp{
+    right:15px;
+    bottom:15px;
+    width:50px;
+    height:50px;
+    font-size:24px;
+}
 
+#topBtn{
+    right:15px;
+    bottom:75px;
+    width:45px;
+    height:45px;
+}
 
 /* SMALL PHONES */
 @media (max-width:480px){
 
-    .hero-text h1{
-        font-size:30px;
-    }
-
-
-    .hero-text p{
+    html{
         font-size:15px;
     }
 
+    .logo img{
+        width:110px;
+    }
+
+    .hero{
+        padding:130px 20px 60px;
+    }
+
+    .hero-text h1{
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .hero-text p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+    }
 
     .btn,
-    .btn2,
-    .quote-btn{
-        padding:12px 22px;
+    .btn-outline{
+        width:100%;
+        text-align:center;
     }
 
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .section-title p{
+        font-size:15px;
+    }
+
+    .about-content h3{
+        font-size:1.7rem;
+    }
 
     .card{
-        padding:25px;
+        padding:22px;
     }
 
-}
-@keyframes spin{
-    from{
-        transform:rotate(0deg);
+    .contact-info,
+    .contact-form{
+        padding:20px;
     }
-    to{
-        transform:rotate(360deg);
+
+    .contact-info h3{
+        font-size:22px;
+    }
+
+    
+.contact-info p{
+    font-size:17px;
+    line-height:1.8;
+    font-weight:500;
+}
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .whatsapp{
+        width:55px;
+        height:55px;
+        font-size:28px;
+    }
+
+    #topBtn{
+        width:45px;
+        height:45px;
     }
 }
 /* Professional Toast Notification */
@@ -864,4 +974,12 @@ footer hr{
 
 .toast.error{
     background:#DC2626;
+}
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
 }

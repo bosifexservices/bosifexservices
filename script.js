@@ -81,7 +81,7 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                showToast("✅ Message sent successfully!.success");
+                showToast("✅ Message sent successfully","success");
                 contactForm.reset();
             } else {
                 showToast("❌ Failed to send message. Please try again.");
