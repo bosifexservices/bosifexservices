@@ -72,8 +72,12 @@ section{
     text-decoration:none;
     border-radius:50px;
     transition:.3s;
+text-align: center;
     font-weight:600;
+width: fit-content;
+margin: 20px auto;
 }
+
 
 .btn{
     background:#0F9E0B;
@@ -238,8 +242,9 @@ section{
     display:flex;
     gap:20px;
     flex-wrap:wrap;
-    justify-content:flex-start;
+    justify-content:center;
 }
+
 
 
 .hero-badge{
@@ -894,8 +899,9 @@ section{
 
     .btn,
     .btn-outline{
-        width:100%;
+        width:fit-content;
         text-align:center;
+margin: 0 auto;
     }
 
     .section-title h2{
