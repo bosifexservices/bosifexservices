@@ -240,13 +240,21 @@ margin: 20px auto;
 
 .hero-buttons{
     display:flex;
+    align-items:center;
+    justify-content:center;
     gap:20px;
-    flex-wrap:wrap;
-    justify-content:flex-start;
-align-items: center;
-margin-top: 35px;
+    flex-wrap:nowrap;
 }
 
+.hero-buttons .btn,
+.hero-buttons .btn-outline{
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 30px;
+    border-radius:50px;
+}
 
 
 .hero-badge{
@@ -1027,26 +1035,104 @@ margin: 0 auto;
         transform:rotate(360deg);
     }
 }
+
+/* ==========================
+   BOSIFEX AI CHAT
+========================== */
+
 .ai-chat-button{
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 60px;
-    height: 60px;
-    background: #0F766E;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0,0,0,.25);
-    transition: all .3s ease;
-    z-index: 9999;
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    width:60px;
+    height:60px;
+    background:#0F766E;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    cursor:pointer;
+    z-index:9999;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
-.ai-chat-button:hover{
-    transform: scale(1.08);
-    background: #0c5f58;
+
+.chat-box{
+    position:fixed;
+    bottom:90px;
+    left:20px;
+    width:350px;
+    max-width:90%;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    display:none;
+    flex-direction:column;
+    z-index:9998;
+}
+
+
+.chat-box.show{
+    display:flex;
+}
+
+
+.chat-header{
+    background:#0F766E;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    font-weight:600;
+}
+
+
+.chat-body{
+    padding:15px;
+    height:300px;
+    overflow-y:auto;
+}
+
+
+.bot-message,
+.user-message{
+    margin-bottom:10px;
+    padding:10px;
+    border-radius:10px;
+}
+
+
+.bot-message{
+    background:#f1f1f1;
+}
+
+
+.user-message{
+    background:#0F766E;
+    color:white;
+}
+
+
+.chat-footer{
+    display:flex;
+    padding:10px;
+    gap:8px;
+}
+
+
+.chat-footer input{
+    flex:1;
+    padding:10px;
+}
+
+
+.chat-footer button{
+    padding:10px 15px;
+    background:#0F766E;
+    color:white;
+    border:none;
+    border-radius:8px;
 }
