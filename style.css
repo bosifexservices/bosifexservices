@@ -989,3 +989,29 @@ margin: 0 auto;
         transform:rotate(360deg);
     }
 }
+/* ===========================
+   AI CHAT BUTTON
+=========================== */
+
+.ai-chat-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #0F766E;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.ai-chat-button:hover{
+    transform: scale(1.08);
+}
