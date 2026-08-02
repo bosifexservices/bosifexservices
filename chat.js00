@@ -1,5 +1,0 @@
-const chatBtn = document.getElementById("chatBtn");
-
-chatBtn.addEventListener("click", () => {
-    alert("Welcome to Bosifex AI! Coming soon...");
-});

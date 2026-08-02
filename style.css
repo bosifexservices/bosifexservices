@@ -242,7 +242,9 @@ margin: 20px auto;
     display:flex;
     gap:20px;
     flex-wrap:wrap;
-    justify-content:center;
+    justify-content:flex-start;
+align-items: center;
+margin-top: 35px;
 }
 
 
@@ -866,6 +868,22 @@ section{
     width:45px;
     height:45px;
 }
+@media (max-width:768px){
+
+    .chat-box{
+        width: calc(100% - 20px);
+        height: 75vh;
+        left: 10px;
+        right: 10px;
+        bottom: 90px;
+    }
+
+    .ai-chat-button{
+        left: 15px;
+        bottom: 20px;
+    }
+
+}
 
 /* SMALL PHONES */
 @media (max-width:480px){
@@ -895,7 +913,10 @@ section{
     .hero-buttons{
         flex-direction:column;
         width:100%;
-    }
+ 
+align-items: center;
+justify content: center;
+   }
 
     .btn,
     .btn-outline{
@@ -951,6 +972,23 @@ margin: 0 auto;
         height:45px;
     }
 }
+/* AI Chat - 480px */
+
+.ai-chat-button{
+    left:15px;
+    bottom:20px;
+    width:55px;
+    height:55px;
+    font-size:24px;
+}
+
+.chat-box{
+    left:10px;
+    right:10px;
+    bottom:85px;
+    width:auto;
+    height:70vh;
+}
 /* Professional Toast Notification */
 
 .toast{
@@ -989,14 +1027,10 @@ margin: 0 auto;
         transform:rotate(360deg);
     }
 }
-/* ===========================
-   AI CHAT BUTTON
-=========================== */
-
 .ai-chat-button{
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     width: 60px;
     height: 60px;
     background: #0F766E;
@@ -1007,11 +1041,12 @@ margin: 0 auto;
     align-items: center;
     font-size: 28px;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    transition: all .3s ease;
     z-index: 9999;
-    transition: 0.3s;
 }
 
 .ai-chat-button:hover{
     transform: scale(1.08);
+    background: #0c5f58;
 }

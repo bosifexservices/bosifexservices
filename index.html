@@ -654,9 +654,61 @@ target="_blank">
 <i class="fa-solid fa-arrow-up"></i>
 </button>
 <div id="toast" class="toast"></div>
-<!-- AI Chat Button -->
+
+<!-- ==========================
+     BOSIFEX AI CHAT
+========================== -->
+
 <div class="ai-chat-button" id="chatBtn">
     💬
+</div>
+
+<div class="chat-box" id="chatBox">
+
+    <div class="chat-header">
+        <span>🤖 Bosifex AI</span>
+        <span id="closeChat">&times;</span>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+
+        <div class="bot-message">
+            👋 Hello! Welcome to <strong>Bosifex Services</strong>.
+
+            <br><br>
+
+            I can help you with:
+
+            <br>✅ CAC Registration
+            <br>✅ Company Registration
+            <br>✅ Trademark Registration
+            <br>✅ TIN Registration
+            <br>✅ NIN Services
+            <br>✅ Website Development
+            <br>✅ Graphic Design
+            <br>✅ CV Writing
+
+            <br><br>
+
+            Type your question below.
+        </div>
+
+    </div>
+
+    <div class="chat-footer">
+
+        <input
+            type="text"
+            id="userMessage"
+            placeholder="Type your message..."
+        >
+
+        <button id="sendBtn">
+            Send
+        </button>
+
+    </div>
+
 </div>
 
 <script src="chat.js"></script>
