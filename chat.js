@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(){
             <div class="user-message">
                 ${message}
             </div>
-        ;
+        `;
 
 
         userMessage.value = "";
@@ -45,9 +45,7 @@ document.addEventListener("DOMContentLoaded", function(){
             <div class="bot-message">
                 🤖 I received your message. AI connection will be added soon.
             </div>
-        ;
-
-
+        `;
         chatBody.scrollTop = chatBody.scrollHeight;
 
     });
