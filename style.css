@@ -1026,7 +1026,8 @@ margin: 0 auto;
 .chat-btn {
     position: fixed;
     bottom: 25px;
-    right: 25px;
+    left: 25px;
+    right: auto;
     width: 60px;
     height: 60px;
     border: none;
@@ -1047,7 +1048,8 @@ margin: 0 auto;
 .chat-box {
     position: fixed;
     bottom: 95px;
-    right: 25px;
+left: 25px;
+    right: auto;
     width: 350px;
     max-width: 90%;
     height: 500px;
@@ -1136,15 +1138,23 @@ margin: 0 auto;
     .chat-box {
         width: 350px;
         height: 450px;
-        right: 20px;
+left: 20px;
+        right: auto;
         bottom: 90px;
     }
+.chat-btn {
+        left: 20px;
+        right: auto;
+        bottom: 20px;
+    }
+
 }
 /* Mobile */
 @media (max-width: 480px) {
     .chat-box {
         width: 95%;
-        right: 2.5%;
+        right: auto;
+left: 2.5%;
         height: 420px;
         bottom: 90px;
     }
@@ -1152,5 +1162,8 @@ margin: 0 auto;
     .chat-btn {
         width: 55px;
         height: 55px;
+left: 15px;
+right: auto;
+bottom: 15px;
     }
 }
