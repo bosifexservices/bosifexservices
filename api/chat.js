@@ -29,11 +29,17 @@ export default async function handler(req, res) {
 
     const data = await response.json();
 
+    if (!response.ok) {
+      return res.status(response.status).json(data);
+    }
+
     res.status(200).json({
-      reply: data.choices?.[0]?.message?.content || "No response."
+      reply: data.choices?.[0]?.message?.content || "No response from AI."
     });
 
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({
+      error: error.message
+    });
   }
 }
